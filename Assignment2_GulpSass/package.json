@@ -1,7 +1,7 @@
 {
-  "name": "cs554-assignment-one",
+  "name": "cs554-assignment-two",
   "version": "1.0.0",
-  "description": "Assignment One for CS554",
+  "description": "Assignment Two for CS554",
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.2",
@@ -24,7 +24,8 @@
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "concurrently -n 'GULP,SERVER' -c 'cyan,green' 'gulp watch' 'nodemon app.js'",
+    "dev":
+      "concurrently -n 'GULP,SERVER' -c 'cyan,green' 'gulp watch' 'nodemon app.js'",
     "build": "gulp build"
   },
   "author": "Rob Herley",
