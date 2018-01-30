@@ -1,2 +1,29 @@
 // Change later to partials
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'variables';
+
+.scrollable-container {
+  @extend .container-fluid;
+  overflow: scroll;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column; // Move nav on small screens
+  }
+}
+
+.leftnav {
+  background-color: $blue;
+  padding: 1em;
+  width: 20%;
+  @include media-breakpoint-down(sm) {
+    width: 100%; // Full-length nav
+  }
+}
+
+.pad {
+  padding: 1em;
+}

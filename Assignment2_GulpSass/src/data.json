@@ -1,0 +1,121 @@
+[
+  {
+    "id": "porsche944",
+    "name": "Porsche 944 Turbo",
+    "imgsrc": "Daniel J. Leivick",
+    "short": "The front-engined Porsche to rule them all.",
+    "long":
+      "The 944 is example numero uno when debating the merit of a front-engined Porsche. It's lightweight, handles great, and, in turbo form, it packs a competitive punch. Nearly 30 years on, it's still favored by a lot of grassroots racers.",
+    "make": "Porsche",
+    "model": "944 Turbo",
+    "year": "1982–1991",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "quattro",
+    "name": "Audi Quattro",
+    "imgsrc": "Dino Dalle Carbonare",
+    "short": "The revolutionary four-wheel drive rally car.",
+    "long":
+      "The Quattro is certainly one of the most important cars on this list. As a rally car, it ushered in the four-wheel drive revolution. As a street car, it was a solid performer with handsome looks that have aged more gracefully than the vast majority of cars from the decade.",
+    "make": "Audi",
+    "model": "Quattro",
+    "year": "1980–1991",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "buick",
+    "name": "Buick GNX",
+    "imgsrc": "Automotive News",
+    "short": "This isn't your Grandma's Buick.",
+    "long":
+      "It may not be the fastest, sexiest or best handling American car of the 1980s, but the Buick GNX is easily the most badass and arguably the most iconic. Blacked out, debadged and looking like a vehicular super villain, the GNX stood in stark contrast to Buick’s otherwise sedate image.",
+    "make": "Buick",
+    "model": "GNX",
+    "year": "1987",
+    "review": ["Mike Schlee", "AutoGuide.com"]
+  },
+  {
+    "id": "delorean",
+    "name": "DeLorean DMC-12",
+    "imgsrc": "DeLorean.com",
+    "short": "What's not to say about this car, it's a time machine!",
+    "long":
+      "The DeLorean is all about pros and cons. On the plus side it's the frickin' time machine, it's got that awesome Giorgetto Giugiaro-penned design with gullwing doors, and it looks great in bare stainless steel. On the downside: it's underpowered, features mediocre handling, and everyone will ask you if you've got enough road to get up to 88 mph. Still. You know it's cool.",
+    "make": "DeLorean",
+    "model": "DMC-12",
+    "year": "1981–1983",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "ford200",
+    "name": "Ford RS 200",
+    "imgsrc": "Autowp.ru",
+    "short": "The rally failure that can do 0-60 in 3.5 seconds.",
+    "long":
+      "To be clear: The RS 200 was an absolute failure as a rally car. It was under-powered, tricky to drive, and actually was involved in spectator deaths. As a homologation special road car, however, it's an all-time great. It's a shame Ford only made 200 of this mid-rear mounted, four-wheel drive, super-lightweight 250 hp two-seater. Fun fact: it can hit 60 mph in just 3.5 seconds, which is faster than all but the very fastest cars in the world, even today.",
+    "make": "Ford",
+    "model": "RS 200",
+    "year": "1984–1986",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "ferrari288",
+    "name": "Ferrari 288 GTO",
+    "imgsrc": "FavCars",
+    "short": "Fastest car in the world... in 1984.",
+    "long":
+      "A homologation car, the 288 GTO was designed to compete in the same class as the RS 200 on the road racing side of things. That the class was cancelled before the car was ready is one of history's twists of fate. Instead, it was a 400 hp beast that was the fastest car in the world when it came out, at 189 mph. Just as importantly: much of the car's mechanical bits formed the basis of the F40.",
+    "make": "Ferrari",
+    "model": "288 GTO",
+    "year": "1984–1987",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "bmwe30",
+    "name": "BMW E30 M3",
+    "imgsrc": "BMW Blog",
+    "short": "The world-dominating series 3 bimmer.",
+    "long":
+      "The E30 M3 is quite simply the most successful homologation special of all time. With all due respect to so many great cars made purely to qualify a race car, the E30 M3 not only dominated racing around the world—BMW claims the E30 has won more races than any other car in history—the car was such a commercial success it spawned its own iconic line of factory-suped up 3-Series Bimmers. No other car on this list comes close to that.",
+    "make": "BMW",
+    "model": "E30 M3",
+    "year": "1982–1994",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "ferrarif40",
+    "name": "Ferrari F40",
+    "imgsrc": "Axion 23",
+    "short": "One of the most iconic 80s sports cars.",
+    "long":
+      "How good was the F40? The last Ferrari designed during Enzo's life used all sorts of state of the art tech, saving weight with tons of kevlar and carbon throughout the body. (The car itself was shaped in a wind tunnel.) The first production car to ever top 200 mph was on every car-obsessed kid's wall in the '80s; and in terms of competition, only one car was close, the Porsche 959.",
+    "make": "Ferrari",
+    "model": "F40",
+    "year": "1987–1992",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "porsche959",
+    "name": "Porsche 959",
+    "imgsrc": "CarScoops.com",
+    "short": "It's among the best of all-time.",
+    "long":
+      "The 959 isn't the best because it could do 198 mph. It isn't the best because it let the world know that twin turbos are awesome, or that variable all-wheel drive was a thing. It's not even the best because of its treasured place in the collections of guys like Jerry Seinfeld and Bill Gates. The car's influence is still felt to this day on Porsche's lineup, and even that isn't enough. The Porsche 959 is the best car of the 1980s because it walked the walk, winning everything from Dakar to Le Mans. Quite simply, in its heyday, nothing made could beat this car on any surface.",
+    "make": "Porsche",
+    "model": "959",
+    "year": "1986–1988",
+    "review": ["Aaron Miller", "Thrillist"]
+  },
+  {
+    "id": "kitt",
+    "name": "KITT",
+    "imgsrc": "Knight Rider (1982)",
+    "short": "A Trans Am with an artifical intelligence...",
+    "long":
+      "KITT (Knight Industries Two Thousand), was designed by the late Wilton Knight, a brilliant but eccentric billionaire and founder of the Foundation for Law And Government (FLAG) and its parent Knight Industries. The original KITT's main cybernetic processor was first installed in a mainframe computer used by the US government in Washington, D.C.",
+    "make": "Pontiac",
+    "model": "Trans Am",
+    "year": "1982"
+  }
+]

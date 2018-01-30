@@ -6,6 +6,7 @@ const gulpSASS = require('gulp-sass');
 const rename = require('gulp-rename');
 
 const sassFiles = ['./src/scss/*'],
+  imgFiles = ['./src/img/*'],
   jsFiles = ['./src/js/*'],
   vendorJsFiles = [
     './node_modules/jquery/dist/jquery.min.js',
@@ -44,11 +45,16 @@ gulp.task('js:custom', () => {
     .pipe(gulp.dest('./public/js/'));
 });
 
-gulp.task('build', ['sass', 'js:vendor', 'js:custom']);
+gulp.task('img', () => {
+  gulp.src(imgFiles).pipe(gulp.dest('./public/img/'));
+});
+
+gulp.task('build', ['sass', 'js:vendor', 'js:custom', 'img']);
 
 gulp.task('watch', () => {
   gulp.watch(sassFiles, ['sass']);
   gulp.watch(jsFiles, ['js:custom']);
+  gulp.watch(imgFiles, ['img']);
 });
 
 gulp.task('default', ['watch']);

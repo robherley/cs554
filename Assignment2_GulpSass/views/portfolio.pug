@@ -1,0 +1,46 @@
+extends layout.pug
+
+block content
+  .wrapper
+    .leftnav
+      h1 Outrun Motors
+      p Maximum Aesthetic
+    .scrollable-container
+        .row
+          each item in showcase
+            .col-12.col-md-6.col-lg-4(id=item.id).pad
+              .card.h-100
+                img(class="card-img-top" src=`/img/${item.id}.jpg` alt=`Image of ${item.name}`)
+                .card-body
+                  p.h5.card-title #{item.name}
+                  p.card-text #{item.short}
+                  button(type="button" class="btn btn-primary" data-toggle="modal" data-target='#' + `${item.id}_modal`) More Info
+            .modal.fade(tabindex='-1' role='dialog' aria-hidden='true' id=`${item.id}_modal`)
+              .modal-dialog.modal-lg(role='document')
+                .modal-content
+                  .modal-header
+                    p.h5 #{item.name}
+                    button.close(type='button' data-dismiss="modal" aria-label='Close')
+                      span(aria-hidden='true') &times;
+                  .modal-body
+                    .row
+                      .col-12.col-md-8
+                        blockquote.blockquote
+                          p.mb-0 #{item.long}
+                          if item.review
+                            footer.blockquote-footer Aaron Miller from 
+                              cite(title="Source Title") Thrillist
+                      .col-12.col-md-4
+                        .row
+                        | Make: #{item.make}
+                        .row
+                        | Model: #{item.model}
+                        .row
+                        | Year: #{item.year}
+                        .row
+                        | Image Credits: #{item.imgsrc}
+                  .modal-footer
+                    button.btn.btn-secondary(type='button' data-dismiss="modal") Close
+block scripts
+  script(src="/js/vendor.min.js")
+  script(src="/js/js.min.js")
