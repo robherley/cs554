@@ -1,0 +1,32 @@
+{
+  "name": "cs554-assignment-one",
+  "version": "1.0.0",
+  "description": "Assignment One for CS554",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "concurrently": "^3.5.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jquery": "^3.3.1",
+    "nodemon": "^1.14.11",
+    "popper.js": "^1.12.9"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "concurrently -n 'GULP,SERVER' -c 'cyan,green' 'gulp watch' 'nodemon app.js'",
+    "build": "gulp build"
+  },
+  "author": "Rob Herley",
+  "license": "ISC"
+}
