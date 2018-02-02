@@ -1,6 +1,25 @@
-// Change later to partials
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+// CDNs are less annoying
+@import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Play|Titillium+Web');
+
+// Maybe Change Later to Partials
 @import 'variables';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+tbody:last-child {
+  border-bottom: 1px solid #dee2e6;
+}
+
+code {
+  color: $green;
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
 
 .scrollable-container {
   @extend .container-fluid;
@@ -16,14 +35,107 @@
 }
 
 .leftnav {
-  background-color: $blue;
+  color: $white;
+  background-color: rgba($gray-700, 0.6);
   padding: 1em;
+  min-width: 13em;
   width: 20%;
+  @include media-breakpoint-up(md) {
+    .d-flex {
+      display: none !important;
+    }
+    .row {
+      display: none;
+    }
+  }
   @include media-breakpoint-down(sm) {
+    .img-fluid {
+      display: none;
+    }
+    .nav {
+      display: none;
+    }
     width: 100%; // Full-length nav
   }
 }
 
 .pad {
   padding: 1em;
+  &:focus {
+    .card {
+      outline: 0.3em solid rgba($primary, 0.6);
+      border-color: $blue;
+    }
+  }
+}
+
+.btn-bottom {
+  @extend .btn;
+  position: absolute !important;
+  right: 0;
+  bottom: 0;
+}
+
+.card {
+  outline: 0.3em solid rgba($gray-200, 0.6);
+  border-color: $gray-200;
+}
+
+.card-title {
+  color: $blue;
+  font-size: 1.5em;
+  font-family: 'Play', sans-serif;
+}
+
+.card-body {
+  padding-bottom: 2.5em !important;
+}
+
+.stand-out {
+  text-transform: uppercase;
+  color: $pink;
+}
+
+.modal-header {
+  color: $blue;
+  font-family: 'Play', sans-serif;
+  .h5 {
+    font-size: 2em;
+  }
+}
+
+.blockquote-footer {
+  color: $yellow;
+}
+
+.close {
+  text-shadow: none !important;
+  color: $white;
+}
+
+.dropdown-menu {
+  outline: 0.3em solid rgba($white, 0.6);
+  border-color: $gray-200;
+}
+
+.h2 {
+  padding-left: 1em;
+}
+
+.logo {
+  color: $pink;
+  font-size: 2.5em;
+}
+
+.img-logo {
+  border: 0.4em solid $gray-200;
+}
+
+.img-border {
+  @include media-breakpoint-up(md) {
+    margin: 1em;
+    outline: 0.3em solid rgba($white, 0.6);
+    border: 2px solid $white;
+  }
+  margin-bottom: 1em;
 }

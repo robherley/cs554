@@ -3,44 +3,74 @@ extends layout.pug
 block content
   .wrapper
     .leftnav
-      h1 Outrun Motors
-      p Maximum Aesthetic
+      //- Large Screens (> sm)
+      img.img-fluid.img-logo(src="/img/logo.jpg", alt="Rob's Outrun Motors Logo")
+      ul.nav.flex-column
+        each item in showcase
+          li.nav-item
+            a.nav-link.btn-secondary(href=`#${item.id}`) #{item.name}
+      //- Small Screens (< sm)
+      .d-flex.align-items-center.justify-content-center
+          i.fas.fa-car.logo
+          p.h2.text-primary Rob's Outrun Motors
+      .row
+        .col-12
+          .btn-group.btn-block
+            button.btn.btn-block.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | View Cars
+            .dropdown-menu.btn-block
+              each item in showcase
+                a.btn-secondary.btn-block.dropdown-item(href=`#${item.id}`) #{item.name}
+
+
     .scrollable-container
         .row
           each item in showcase
-            .col-12.col-md-6.col-lg-4(id=item.id).pad
+            .col-12.col-md-6.col-lg-4(id=item.id, tabindex="-1").pad
               .card.h-100
                 img(class="card-img-top" src=`/img/${item.id}.jpg` alt=`Image of ${item.name}`)
                 .card-body
                   p.h5.card-title #{item.name}
                   p.card-text #{item.short}
-                  button(type="button" class="btn btn-primary" data-toggle="modal" data-target='#' + `${item.id}_modal`) More Info
+                  label.d-none(for=`${item.id}_button`) Read More About #{item.name}
+                  button.btn-bottom.btn-danger(id=`${item.id}_button` type="button" data-toggle="modal" data-target='#' + `${item.id}_modal`) 
+                    i.fas.fa-newspaper
             .modal.fade(tabindex='-1' role='dialog' aria-hidden='true' id=`${item.id}_modal`)
               .modal-dialog.modal-lg(role='document')
                 .modal-content
                   .modal-header
                     p.h5 #{item.name}
                     button.close(type='button' data-dismiss="modal" aria-label='Close')
-                      span(aria-hidden='true') &times;
+                      i.fas.fa-times
                   .modal-body
                     .row
-                      .col-12.col-md-8
+                      .col-12.col-md-8.offset-md-2
+                        img.img-fluid.img-border(src=`/img/${item.id}.jpg` alt=`Image of ${item.name}`)
+                    .row
+                      .col-12.col-md-6.col-lg-8
                         blockquote.blockquote
                           p.mb-0 #{item.long}
                           if item.review
                             footer.blockquote-footer Aaron Miller from 
                               cite(title="Source Title") Thrillist
-                      .col-12.col-md-4
-                        .row
-                        | Make: #{item.make}
-                        .row
-                        | Model: #{item.model}
-                        .row
-                        | Year: #{item.year}
-                        .row
-                        | Image Credits: #{item.imgsrc}
+                      .col-12.col-md-6.col-lg-4
+                        table.table.table-hover
+                          tbody
+                            tr
+                              td.text-success Make
+                              td #{item.make}
+                            tr
+                              td.text-success Model
+                              td #{item.model}
+                            tr
+                              td.text-success Year
+                              td #{item.year}
+                            tr
+                              td.text-success Image Credits
+                              td #{item.imgsrc}
                   .modal-footer
                     button.btn.btn-secondary(type='button' data-dismiss="modal") Close
+    #particles
 block scripts
   script(src="/js/vendor.min.js")
-  script(src="/js/js.min.js")
+  script(src="/js/custom.min.js")

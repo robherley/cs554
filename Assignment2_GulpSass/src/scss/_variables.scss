@@ -1,49 +1,91 @@
-@import 'node_modules/bootstrap/scss/_variables.scss';
+// Colors
 
 $white: #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
+$gray-100: #ebebeb;
+$gray-200: #4e5d6c;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
-$gray-600: #6c757d;
+$gray-600: #868e96;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-$blue: #007bff;
+$blue: #68b2ff;
 $indigo: #6610f2;
 $purple: #6f42c1;
-$pink: #e83e8c;
-$red: #dc3545;
-$orange: #fd7e14;
-$yellow: #ffc107;
-$green: #28a745;
+$pink: #e21181;
+$red: #d9534f;
+$orange: #f0ad4e;
+$yellow: #ffc98f;
+$green: #6eec8f;
 $teal: #20c997;
-$cyan: #17a2b8;
+$cyan: #5bc0de;
 
 $primary: $blue;
-$secondary: $gray-600;
+$secondary: $gray-200;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
-$danger: $red;
-$light: $gray-100;
-$dark: $gray-800;
+$danger: $pink;
+$light: lighten($gray-200, 25%);
+$dark: $gray-200;
 
-$theme-colors: ();
-$theme-colors: map-merge(
+// Body
 
-  (
-    'primary': $primary,
-    'secondary': $secondary,
-    'success': $success,
-    'info': $info,
-    'warning': $warning,
-    'danger': $danger,
-    'light': $light,
-    'dark': $dark
-  ),
-  $theme-colors
-);
+$body-bg: $gray-900;
+$body-color: $gray-100;
+
+// Components
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+// Fonts
+$font-family-sans-serif: 'Titillium Web', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+$text-muted: rgba(255, 255, 255, 0.5);
+
+// Dropdowns
+$dropdown-bg: $gray-200;
+$dropdown-divider-bg: rgba($black, 0.15);
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-color: $dropdown-link-color;
+$dropdown-link-hover-bg: rgba($white, 0.075);
+
+// Navs
+$nav-link-disabled-color: rgba(255, 255, 255, 0.4);
+$nav-tabs-border-color: $gray-200;
+$nav-tabs-link-active-color: $body-color;
+$nav-tabs-link-active-border-color: $gray-200;
+
+// Tables
+$table-accent-bg: rgba($white, 0.05) !default;
+$table-hover-bg: rgba($white, 0.075) !default;
+$table-dark-bg: $light !default;
+$table-dark-border-color: $gray-200 !default;
+$table-dark-color: $body-bg !default;
+
+// Navbar
+$navbar-padding-y: 0.25rem;
+$navbar-dark-color: rgba($white, 0.75);
+$navbar-dark-hover-color: $white;
+
+// Modals
+$modal-content-bg: $gray-200;
+$modal-header-border-color: rgba(0, 0, 0, 0.2);
+
+// Cards
+$card-cap-bg: rgba($white, 0.075);
+$card-bg: $gray-200;
+
+// List group
+$list-group-bg: $gray-200;
+$list-group-border-color: transparent;
+$list-group-hover-bg: $nav-link-disabled-color;
+$list-group-disabled-color: $nav-link-disabled-color;
+$list-group-action-color: $white;
+$list-group-action-hover-color: $white;
