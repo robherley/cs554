@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import 'nord.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  height: 100vh;
+  background-color: var(--nord0);
+  color: var(--nord4);
+}
+
+h1 {
+  font-size: 2.3rem;
+  color: var(--nord14);
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+h1 > span {
+  color: var(--nord5);
+}
+
+input[type='text'] {
+  border: none;
+  height: 4rem;
+  font-size: 1.5rem;
+  color: var(--nord2);
+  padding-left: 1rem;
+  outline: none;
+  background-color: var(--nord5);
+}
+
+.search {
+  width: 30rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  background-color: var(--nord5);
+  position: relative;
+  border-radius: 4px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.popup {
+  position: absolute;
+  background-color: var(--nord11);
+  color: var(--nord5);
+  width: 15rem;
+  font-size: 1.2rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 4.3em;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+.icon {
+  color: var(--nord1);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
