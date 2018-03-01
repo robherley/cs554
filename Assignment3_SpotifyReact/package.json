@@ -2,7 +2,7 @@
   "name": "assignment3_spotifyreact",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
+  "author": "Robert Herley",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.3",
     "@fortawesome/fontawesome-free-regular": "^5.0.7",
@@ -12,8 +12,7 @@
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1",
-    "styled-components": "^3.1.6"
+    "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
