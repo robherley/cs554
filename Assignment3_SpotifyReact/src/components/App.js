@@ -1,9 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import Search from './Search';
+import Logo from './Logo';
+import Track from './Track';
 import { spotifyAuth } from '../utils/spotify';
 
 class App extends Component {
-  state = {};
+  state = {
+    results: [],
+    currentTrack: null
+  };
 
   /**
    * Generates a new access token from spotify.
@@ -28,14 +33,58 @@ class App extends Component {
     });
   };
 
+  /**
+   * Get the results, adds to state
+   * @param results list of results from spotify api
+   */
+  updateResults = results => {
+    this.setState({ results, currentTrack: null }, () =>
+      this.refs.audio_tag.pause()
+    );
+  };
+
+  /**
+   * Plays a current track using html5 audio
+   * @param currentTrack spotify url of preview url
+   */
+  playSong = currentTrack => {
+    if (currentTrack === this.state.currentTrack) {
+      this.setState({ currentTrack: null }, () => this.refs.audio_tag.pause());
+    } else {
+      this.setState({ currentTrack }, () => this.refs.audio_tag.play());
+    }
+  };
+
   render = () => {
-    const { access_token } = this.state;
+    const { access_token, results, currentTrack } = this.state;
     return (
       <Fragment>
-        <h1>
-          Howdy, <span>please search for a song.</span>
-        </h1>
-        {access_token && <Search tk={access_token} />}
+        <div className="search-container">
+          <Logo
+            head={access_token ? 'howdy,' : 'Loading...'}
+            sub={access_token ? 'please search for a track' : ''}
+          />
+          {access_token && (
+            <Search tk={access_token} handleResults={this.updateResults} />
+          )}
+        </div>
+        <div className="list-container">
+          {results.map((e, i) => (
+            <Track
+              onClick={() => e.preview_url && this.playSong(e.preview_url)}
+              key={i}
+              playing={
+                e.preview_url && e.preview_url === this.state.currentTrack
+              }
+              track={e}
+            />
+          ))}
+        </div>
+        <audio
+          ref="audio_tag"
+          src={currentTrack}
+          onEnded={() => this.setState({ currentTrack: null })}
+        />
       </Fragment>
     );
   };

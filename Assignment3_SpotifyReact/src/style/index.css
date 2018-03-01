@@ -1,87 +1,218 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
-@import 'nord.css';
+@import 'siimple.css';
+
+:root {
+  --curves: 4px;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Muli', sans-serif;
   height: 100vh;
-  background-color: var(--nord0);
-  color: var(--nord4);
+  background-color: var(--siimple-grey-0);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h1 {
-  font-size: 2.3rem;
-  color: var(--nord14);
+  font-size: 2.2em;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-}
-
-h1 > span {
-  color: var(--nord5);
+  border-top-right-radius: var(--curves);
+  border-bottom-right-radius: var(--curves);
+  color: var(--siimple-navy-0);
 }
 
 input[type='text'] {
   border: none;
-  height: 4rem;
+  height: 3rem;
+  width: 90%;
   font-size: 1.5rem;
-  color: var(--nord2);
   padding-left: 1rem;
   outline: none;
-  background-color: var(--nord5);
+  background-color: var(--siimple-grey);
+}
+
+#root {
+  height: 100%;
 }
 
 .search {
   width: 30rem;
-  padding: 0 1rem;
+  padding: 0 0.5em;
   font-size: 1.5rem;
-  background-color: var(--nord5);
   position: relative;
-  border-radius: 4px;
+  border-radius: var(--curves);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  background-color: var(--siimple-white);
+  background-color: var(--siimple-grey);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  color: var(--siimple-navy-0);
 }
 
 .popup {
   position: absolute;
-  background-color: var(--nord11);
-  color: var(--nord5);
   width: 15rem;
   font-size: 1.2rem;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  top: 4.3em;
+  top: 3em;
   padding: 0.3rem;
   text-align: center;
-  border-radius: 4px;
+  border-radius: var(--curves);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
+  color: var(--siimple-white);
+  background-color: var(--siimple-red-4);
 }
 
-.icon {
-  color: var(--nord1);
-}
-
-#root {
+.search-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 14rem;
+  width: 100%;
+  background: var(--siimple-green-3);
+  background: linear-gradient(to left, #18cd94, #4894f0);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 99;
+}
+
+.list-container {
+  padding-top: 14em;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background-color: var(--siimple-grey);
+  border-radius: var(--curves);
+  padding-right: 1em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* i wish i could use sass in create-react-app */
+.logo-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.logo-container h1 {
+  margin: 0;
+}
+
+.disc {
+  height: 10rem;
+}
+
+.spinner {
+  animation: spin infinite 4s linear;
+  transform-origin: 50% 50%;
+}
+
+.track-container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1em;
+  min-width: 6em;
+}
+
+.track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 75%;
+  max-width: 800px;
+  height: 8em;
+  margin: 2rem 0em;
+  border-radius: var(--curves);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.track > img {
   height: 100%;
+  border-top-left-radius: var(--curves);
+  border-bottom-left-radius: var(--curves);
+}
+
+.track-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: ease 200ms;
+}
+
+.track-artist {
+  color: var(--siimple-navy-2);
+}
+
+.track:hover .overlay {
+  opacity: 0.5;
+  transition: ease 500ms;
+}
+
+.overlay {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--curves);
+  color: var(--siimple-white);
+  opacity: 0;
+  background-color: var(--siimple-navy-2);
+}
+
+.overlay > svg {
+  padding: 0.3em;
+}
+
+.split {
+  z-index: 2;
+  border-top-right-radius: var(--curves);
+  border-bottom-right-radius: var(--curves);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: var(--siimple-grey);
 }
 
 @-webkit-keyframes fadeIn {
@@ -129,5 +260,45 @@ input[type='text'] {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .search {
+    width: 80%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .track {
+    width: 90%;
+  }
+  input[type='text'] {
+    width: 80%;
+    height: 1em;
   }
 }
