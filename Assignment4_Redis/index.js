@@ -1,5 +1,4 @@
-const express = require('express');
-const app = express();
+const app = require('express')();
 const { promisify } = require('util');
 const dummyData = require('./people');
 const client = require('redis').createClient();
@@ -67,9 +66,9 @@ app.use('/api/people/:id', async (req, res) => {
       res.json(dummyLookup);
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({
-      error: err || 'An internal server error has occured.',
+      error: err || 'An internal server error has occurred.',
       code: 500
     });
   }
