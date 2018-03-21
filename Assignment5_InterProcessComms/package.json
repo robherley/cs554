@@ -1,0 +1,20 @@
+{
+  "name": "assignment5_interprocesscomms",
+  "version": "1.0.0",
+  "description": "assignment 5 for cs554",
+  "scripts": {
+    "start": "concurrently -c 'black.bgYellow,black.bgBlue' -n 'Worker,Server' 'node worker/index.js' 'node server/index.js'"
+  },
+  "author": "rob herley",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "node-redis-pubsub": "^2.0.0",
+    "uuid": "^3.2.1"
+  }
+}
