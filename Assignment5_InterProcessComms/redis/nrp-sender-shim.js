@@ -4,7 +4,7 @@ const redis = require('./redis-connection');
 const defaultMessageConfig = {
   data: {},
   timeout: 1000,
-  eventName: 'send',
+  eventName: null,
   expectsResponse: true,
   redis
 };
