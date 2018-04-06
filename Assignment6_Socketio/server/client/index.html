@@ -5,13 +5,48 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+   <link rel="stylesheet" href="css/index.css">
+   <script async src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+   <script async src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+   <script async src="js/client.js"></script>
    <title>Socket Images</title>
 </head>
 
 <body>
-   <h1>Howdy</h1>
-   <p>do socket stuff here</p>
-   <p>do react stuffs too</p>
+
+   <div class="flex-container">
+      <div>
+         <h1 class="title">
+            Howdy!
+         </h1>
+         <p class="subtitle">
+            Please search for an image!
+         </p>
+      </div>
+      <div>
+         <form id="searchForm" class="flex-form">
+            <div class="inner">
+               <label for="username">Username</label>
+               <input class="input" type="text" name="username" id="username" placeholder="Enter a username!" />
+            </div>
+            <div class="inner">
+               <label for="searchInput">Search</label>
+               <input class="input" type="text" name="searchInput" id="searchInput" placeholder="Search for an image!" />
+            </div>
+            <div class="inner">
+               <label for="message">Message</label>
+               <input class="input" type="text" name="message" id="message" placeholder="A clever message!" />
+            </div>
+            <button class="button is-primary" type="submit">Search!</button>
+         </form>
+      </div>
+   </div>
+
+   <div id="results">
+
+   </div>
+
 </body>
 
 </html>
